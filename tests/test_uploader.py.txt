@@ -1,0 +1,15 @@
+# test_uploader.py
+
+import unittest
+from file_uploader.uploader import get_files_by_extension
+
+class TestUploader(unittest.TestCase):
+    def test_get_files_by_extension(self):
+        test_dir = "test_directory"
+        extensions = ["jpg", "png"]
+        files = get_files_by_extension(test_dir, extensions)
+        # Mock test here: Normally you'd set up a mock directory structure
+        self.assertTrue(isinstance(files, list))
+
+if __name__ == "__main__":
+    unittest.main()
